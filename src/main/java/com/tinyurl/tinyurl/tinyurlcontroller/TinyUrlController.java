@@ -9,7 +9,7 @@ public class TinyUrlController {
     @Autowired
     private TinyUrlService tinyUrlService;
 
-    @RequestMapping(value="/shorturl", method = RequestMethod.GET)
+    @RequestMapping(value="/shorturl", method = RequestMethod.POST)
     public String retrieviShortUrl(@RequestParam("longurl") String longUrl){
         return tinyUrlService.retrieveShortUrl(longUrl);
     }
